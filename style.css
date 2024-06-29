@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap")
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    height: 97vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(142, 141, 141);
+}
+
+.container {
+
+    background: #fff;
+    padding: 2rem 7rem;
+    border-radius: 14px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.result_image {
+    display: inline-flex;
+    column-gap: 7rem;
+    align-items: center;
+    position :relative;
+}
+
+.container.start .user_result{
+    transform-origin: left;
+    animation : userShake 0.7s ease infinite;
+}
+
+@keyframes userShake {
+    50% {
+        transform: rotate(10deg);
+    }  
+}
+
+.container.start .cpu_result{
+    transform-origin: right;
+    animation : cpuShake 0.7s ease infinite;
+}
+
+@keyframes cpuShake {
+    50% {
+        transform: rotate(10deg);
+    }  
+}
+
+.result_image img{
+    width: 100px;
+}
+
+.user_result img {
+    transform: rotate(90deg);
+}
+
+.cpu_result img {
+    transform: rotate(-90deg) rotateY(180deg);
+}
+
+.result{
+    text-align: center;
+    font-size: 2rem;
+    color:rgb(74, 67, 82);
+    margin-top: 1.5rem;
+}
+
+.option_image img {
+    width: 50px;
+}
+
+.container.start .option_image {
+    pointer-events: none;
+}
+
+.option_images{
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+    justify-content: space-between;
+
+}
+
+.option_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.option_image:hover{
+    opacity: 1;
+}
+
+.option_image.active{
+    opacity: 1;
+}
+
+.option_image img{
+    pointer-events: none;
+}
+
+.option_image p {
+    color: #7d2ae8;
+    font-size: 1.235rem;
+    margin-top: 1rem;
+    pointer-events: none;
+}
+
+.owner {
+    text-align: center;
+    font-size: 1rem;
+    color: #7d2ae8;
+    box-shadow: 0.1px;
+    box-sizing: border-box;
+    background-color: rgb(225, 240, 240);
+    display: block;
+}
+
+.icon a{
+    display: inline;
+    align-items: center;
+    margin: 2.4rem;
+    font-size: 1.4rem;
+
+}
